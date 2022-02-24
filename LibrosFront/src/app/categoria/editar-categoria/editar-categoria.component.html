@@ -1,0 +1,8 @@
+<h2>Editar Categoria</h2>
+
+<app-formulario-categoria *ngIf="modelo"
+[modelo]="modelo"
+[errores]="errores"
+(onSubmit)="guardarCambios($event)"></app-formulario-categoria>
+
+<mat-spinner *ngIf="!modelo"></mat-spinner>

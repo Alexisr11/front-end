@@ -1,0 +1,39 @@
+.libros-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .libro-contenedor{
+    margin-right: 2%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  P{
+    max-width: 225%;
+    height: 18px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span{
+    max-width: 225%;
+    height: 18px;
+    font-size: 15px;
+  }
+  
+  img{
+    width: 180px;
+    height: 250px;
+    padding: 1rem;
+  }
+  
+  .example-button-row {
+    width: 300px;
+  }
+  
+  .example-button-row .boton {
+    margin: 8px 8px 8px 0;
+  }

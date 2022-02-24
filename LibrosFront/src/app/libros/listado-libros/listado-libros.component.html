@@ -1,0 +1,36 @@
+<app-listado-generico [listado]="libros">
+  
+<ng-container contenido>
+  <ng-container *ngIf="libros && libros.length > 0">
+    <div class="libros-contenedor">
+      <div
+        *ngFor="let libro of libros; let index = index"
+        class="titulo_Libro"
+      >
+        <div class="libro-contenedor">
+          <a>
+            <img [src]="libro.Poster" alt="poster" />
+          </a>
+          <p>
+            <a>{{ libro.titulo }}</a>
+          </p>
+          <span>
+            {{ libro.SubTitulo }}
+          </span>
+          <span>
+            {{ libro.Autor }}
+          </span>
+          <br>
+          <span>
+            {{ libro.Categoria }}
+          </span>
+          <div class="example-button-row">
+            <a class="boton" mat-flat-button color="primary"> Editar </a>
+            <a class="boton" mat-flat-button color="warn"> Borrar </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+</app-listado-generico>
