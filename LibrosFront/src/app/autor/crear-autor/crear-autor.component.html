@@ -1,2 +1,4 @@
 <h2>Crear Autor</h2>
-<app-formulario-autores (submit)="guardarCambios($event)"></app-formulario-autores>
+<app-formulario-autores
+[errores]="errores"
+(OnSubmit)="guardarCambios($event)"></app-formulario-autores>

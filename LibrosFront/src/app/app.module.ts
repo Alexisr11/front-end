@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+import { MarkdownModule} from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListadoLibrosComponent } from './libros/listado-libros/listado-libros.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { MatirialModule } from './material/material.module';
 import { MatTableModule} from '@angular/material/table';
@@ -24,6 +26,7 @@ import { CrearAutorComponent } from './autor/crear-autor/crear-autor.component';
 import { FormularioAutoresComponent } from './autor/formulario-autores/formulario-autores.component';
 import { EditarAutorComponent } from './autor/editar-autor/editar-autor.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
+import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import { InputImgComponent } from './utilidades/input-img/input-img.component';
     CrearAutorComponent,
     FormularioAutoresComponent,
     EditarAutorComponent,
-    InputImgComponent
+    InputImgComponent,
+    InputMarkdownComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { InputImgComponent } from './utilidades/input-img/input-img.component';
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
+    MarkdownModule.forRoot(),
     SweetAlert2Module.forRoot()
   ],
   providers: [],

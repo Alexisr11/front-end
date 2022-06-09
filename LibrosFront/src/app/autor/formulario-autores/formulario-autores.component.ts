@@ -12,12 +12,14 @@ export class FormularioAutoresComponent implements OnInit {
   constructor(private formBilder: FormBuilder) { }
 
   form: FormGroup;
-
   @Input()
   modelo: autorDTO;
 
+  @Input()
+  errores: string[] = [];
+
   @Output()
-  submit: EventEmitter<creacionAutorDTO> = new EventEmitter<creacionAutorDTO>();
+  OnSubmit: EventEmitter<creacionAutorDTO> = new EventEmitter<creacionAutorDTO>();
 
   ngOnInit(): void {
     this.form = this.formBilder.group({
@@ -27,7 +29,8 @@ export class FormularioAutoresComponent implements OnInit {
       }],
 
       fechaNacimiento: '',
-      foto: ''
+      foto: '',
+      biografia: ''
     });
 
     if (this.modelo !== undefined) {
@@ -39,7 +42,11 @@ export class FormularioAutoresComponent implements OnInit {
     this.form.get('foto').setValue(file);
   }
 
+  cambioMarkdown(texto: string){
+    this.form.get('biografia').setValue(texto);
+  }
+
   onSubmit(){
-      this.submit.emit(this.form.value);
+      this.OnSubmit.emit(this.form.value);
   }
 }
