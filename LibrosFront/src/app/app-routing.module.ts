@@ -8,6 +8,10 @@ import { EditarCategoriaComponent} from './categoria/editar-categoria/editar-cat
 import { ListadoAutoresComponent} from './autor/listado-autores/listado-autores.component';
 import { CrearAutorComponent} from './autor/crear-autor/crear-autor.component';
 import { EditarAutorComponent} from './autor/editar-autor/editar-autor.component';
+import { CrearLibreriaComponent} from './librerias/crear-libreria/crear-libreria.component';
+import { EditarLibreriaComponent} from './librerias/editar-libreria/editar-libreria.component';
+import { CrearLibrosComponent} from './libros/crear-libros/crear-libros.component';
+import { EditarLibrosComponent} from './libros/editar-libros/editar-libros.component';
 
 const routes: Routes = [
   {path: 'libros', component: ListadoLibrosComponent},
@@ -18,6 +22,10 @@ const routes: Routes = [
   {path: 'autor/listado-autores', component: ListadoAutoresComponent},
   {path: 'autor/crear-autor', component: CrearAutorComponent},
   {path: 'autor/editar-autor/:id', component: EditarAutorComponent},
+  {path: 'librerias', component: CrearLibreriaComponent},
+  {path: 'librerias/editar-libreria/:id', component: EditarLibreriaComponent},
+  {path: 'libros/crear-libro', component: CrearLibrosComponent},
+  {path: 'libros/editar-libro/:id', component: EditarLibrosComponent},
   {path: '**', redirectTo: ''}
 ];
 

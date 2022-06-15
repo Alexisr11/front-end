@@ -4,6 +4,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 import { MarkdownModule} from 'ngx-markdown';
+import { LeafletModule} from '@asymmetrik/ngx-leaflet'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,13 @@ import { FormularioAutoresComponent } from './autor/formulario-autores/formulari
 import { EditarAutorComponent } from './autor/editar-autor/editar-autor.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
+import { CrearLibreriaComponent } from './librerias/crear-libreria/crear-libreria.component';
+import { EditarLibreriaComponent } from './librerias/editar-libreria/editar-libreria.component';
+import { FormularioLibreriaComponent } from './librerias/formulario-libreria/formulario-libreria.component';
+import { MapaComponent } from './utilidades/mapa/mapa.component';
+import { CrearLibrosComponent } from './libros/crear-libros/crear-libros.component';
+import { FormularioPeliculasComponent } from './libros/formulario-libros/formulario-libros.component';
+import { EditarLibrosComponent } from './libros/editar-libros/editar-libros.component';
 
 
 @NgModule({
@@ -46,7 +54,14 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
     FormularioAutoresComponent,
     EditarAutorComponent,
     InputImgComponent,
-    InputMarkdownComponent
+    InputMarkdownComponent,
+    CrearLibreriaComponent,
+    EditarLibreriaComponent,
+    FormularioLibreriaComponent,
+    MapaComponent,
+    CrearLibrosComponent,
+    FormularioPeliculasComponent,
+    EditarLibrosComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +72,7 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
+    LeafletModule,
     MarkdownModule.forRoot(),
     SweetAlert2Module.forRoot()
   ],

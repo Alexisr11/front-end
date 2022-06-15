@@ -1,0 +1,24 @@
+<form (submit)="OnSubmit()" [formGroup]="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input  formControlName="nombre" matInput/>
+      <mat-error *ngIf="form.invalid">El campo nombre es requerido !!</mat-error>
+    </mat-form-field>
+
+    <h4>Seleccionar la Librería en el Mapa</h4>
+    <div>
+      <app-mapa
+        (coordenadasSeleccionadas)="coordenasSeleccionadas($event)"
+        [coordenadasIniciales]="coordenadasInicial"
+      >
+      </app-mapa>
+    </div>
+    <div>
+      <button mat-flat-button color="primary" [disabled]="form.invalid">
+        Guardar Cambios
+      </button>
+      <a mat-stroked-button routerLink="/librerias">
+        Cancelar
+      </a>
+    </div>
+</form>
